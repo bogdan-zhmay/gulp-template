@@ -1,0 +1,90 @@
+@import 'variables';
+
+// PLACEHOLDER MIXIN
+@mixin placeholderColor($input-text-color) {
+  &::-webkit-input-placeholder {
+    color: $input-text-color;
+  }
+  &:-moz-placeholder {
+    color: $input-text-color;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    color: $input-text-color;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $input-text-color;
+  }
+  &:focus:-moz-placeholder {
+    color: transparent;
+    opacity: 1;
+  }
+  &:focus::-moz-placeholder {
+    color: transparent;
+    opacity: 1;
+  }
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+  &:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+// Clear select without default button
+@mixin clearSelect {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+// BREACKPOINTS MEDIA-QUERY
+@mixin b($point) {
+  @if $point == large {
+    @media (min-width: $brake-point-lg + 'px') {
+      @content;
+    }
+  } @else if $point == desktop {
+    @media (max-width: $brake-point-lg - 1 + 'px') {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (max-width: $brake-point-md - 1 + 'px') {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (max-width: $brake-point-sm - 1 + 'px') {
+      @content;
+    }
+  } @else {
+    @media (max-width: $point + 'px') {
+      @content;
+    }
+  }
+}
+
+@mixin list {
+  font-size: 0;
+  line-height: 0;
+}
+
+@mixin ulist {
+  font-size: $main-font-size;
+  line-height: $main-font-height;
+  display: inline-block;
+}

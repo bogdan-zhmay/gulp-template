@@ -1,0 +1,35 @@
+.btn {
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  font-size: $main-font-size;
+  line-height: 1;
+  padding: 10px 15px;
+  height: 48px;
+  text-transform: uppercase;
+  background: $main-color;
+  color: $white;
+  border: none;
+  border-radius: $global-radius;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: $global-transition;
+
+  &:hover,
+  &:active {
+    color: $white;
+    background: #43455c;
+  }
+
+  &.disabled,
+  &[disabled='disabled'],
+  &[disabled] {
+    background: $gray;
+    color: $medium-gray;
+    cursor: not-allowed;
+    border-color: $medium-gray;
+  }
+}

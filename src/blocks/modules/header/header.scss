@@ -1,0 +1,28 @@
+.header {
+  padding: 30px 30px;
+  background-color: #ccc;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 150px;
+
+    a {
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  
+
+  &__btn {
+    max-width: 150px;
+  }
+}

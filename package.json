@@ -1,11 +1,7 @@
 {
-    "name": "gulp-scss-starter",
+    "name": "gulp-template",
     "description": "Frontend development with pleasure",
-    "author": "Andrey Gorokhov",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/andreyalexeich/gulp-scss-starter.git"
-    },
+    "author": "Bogdan-Zhmay",
     "license": "MIT",
     "scripts": {
         "dev": "gulp",
@@ -68,7 +64,7 @@
         "yargs": "^13.2.4"
     },
     "dependencies": {
-        "smart-grid": "^2.1.2"
+        "jquery": "^3.5.1"
     },
     "husky": {
         "hooks": {
